@@ -5,7 +5,9 @@
 #include "framework.h"
 #include "WK_WinAPI.h"
 
-#define MAX_LOADSTRING 100
+//#define MAX_LOADSTRING 100
+
+constexpr int MAX_LOADSTRING = 100;
 
 // 전역 변수:
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
@@ -65,7 +67,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 //
 ATOM MyRegisterClass(HINSTANCE hInstance)
 {
-    WNDCLASSEXW wcex;
+    WNDCLASSEXW wcex{};
 
     wcex.cbSize = sizeof(WNDCLASSEX);
 
